@@ -73,8 +73,8 @@ def get_proxy():
 
 def run():
 
-    p = get_proxy()
-    proxy = {p['address']}
+    p_g = get_proxy()
+    proxy = {p_g['address']}
 
     try:
         install_id = genString(22)
