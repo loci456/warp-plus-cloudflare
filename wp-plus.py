@@ -56,8 +56,7 @@ url = f'https://api.cloudflareclient.com/v0a{digitString(3)}/reg'
 def get_proxy():
     html = requests.get('https://free-proxy-list.net/').text
     soup = BeautifulSoup(html, 'lxml')
-    trs = soup.find('table', id='proxylisttable').find_all('tr')[
-          1:11]
+    trs = soup.find('table', class_='table table-striped table-bordered').find_all('tr')[1:11]
 
     proxies = []
 
